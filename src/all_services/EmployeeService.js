@@ -1,9 +1,9 @@
 import axios from "axios";
 
-const EMPLOYEE_REST_API = 'http://172.31.253.226:302/api/Emp'
-const EMPLOYEE_REST_API_ADD = 'http://172.31.253.226:302/api/Emp/add'
-const EMPLOYEE_REST_API_UPDATE ='http://172.31.253.226:302/api/Emp/update'
-const EMPLOYEE_REST_API_DELETE ='http://172.31.253.226:302/api/Employee/delete'
+const EMPLOYEE_REST_API = 'http://192.168.1.7:8080/api/Emp'
+const EMPLOYEE_REST_API_ADD = 'http://192.168.1.7:8080/api/Emp/add'
+const EMPLOYEE_REST_API_UPDATE ='http://192.168.1.7:8080/api/Emp/update'
+const EMPLOYEE_REST_API_DELETE ='http://192.168.1.7:8080/api/Employee/delete'
 
 
 class EmployeeService{
