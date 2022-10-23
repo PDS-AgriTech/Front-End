@@ -7,7 +7,7 @@ const FooterComponent = () => {
         <div className="o">
   <ul>
     <li><a href="https://www.facebook.com/oussama.eld.94/">Facebook</a></li>
-    <li><a href="https://codepen.io/julesforrest">Linkedin</a></li>
+    <li><a href="https://www.linkedin.com/in/daoussama/">Linkedin</a></li>
     <li><a href="mailto:oussama.darraz@upec.fr">Upec-Email</a></li>
     <li>
       <p>👋</p>
