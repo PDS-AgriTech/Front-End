@@ -5,13 +5,12 @@ const FooterComponent = () => {
   return (
         <footer className="footer">
         <div className="o">
+          
   <ul>
-    <li><a href="https://www.facebook.com/oussama.eld.94/">Facebook</a></li>
-    <li><a href="https://codepen.io/julesforrest">Linkedin</a></li>
-    <li><a href="mailto:oussama.darraz@upec.fr">Upec-Email</a></li>
-    <li>
-      <p>👋</p>
-    </li>
+  
+      <p>AgriTech ©2022 Created by EPISEN</p>
+      
+    
   </ul>
 </div>
 
@@ -19,5 +18,4 @@ const FooterComponent = () => {
     
   )
 }
-
 export default FooterComponent

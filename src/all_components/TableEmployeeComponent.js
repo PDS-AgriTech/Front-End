@@ -28,8 +28,8 @@ const TableEmployeeComponent = () => {
   }
   
 
-  const deleteemployee = (employeenumero) => {
-      EmployeeService.DeleteEmployee(employeenumero).then((response) => {
+  const deleteemployee = (id) => {
+      EmployeeService.DeleteEmployee(id).then((response) => {
         getAllEmployes();
     })
 }
@@ -51,14 +51,14 @@ const TableEmployeeComponent = () => {
                {
                    employees.map(
                        employee => 
-                       <tr key = {employee.numero}> 
-                       <td> {employee.numero} </td>
+                       <tr key = {employee.id}> 
+                       <td> {employee.id} </td>
                         <td> { employee.dept } </td>
                        <td> { employee.prenom} </td>
                        <td>  { employee.nom} </td>
                        <td>
-                           <Link className="btn btn-info" to={`/modifier-employe/${employee.numero}`} > Modifier </Link>
-                           <button className = "btn btn-danger" onClick = {() => deleteemployee(employee.numero)}
+                           <Link className="btn btn-info" to={`/modifier-employe/${employee.id}`} > Modifier </Link>
+                           <button className = "btn btn-danger" onClick = {() => deleteemployee(employee.id)}
                                     style = {{marginLeft:"10px"}}> Supprimer </button>
                        </td>
             

@@ -20,7 +20,7 @@ function App() {
           <Route exact path ="/" component={TableEmployeeComponent}></Route>
           <Route path ="/employes" component={TableEmployeeComponent}></Route>
           <Route path ="/ajouter-employe" component={AddEmployeeComponent}></Route> 
-          <Route path ="/modifier-employe/:numero" component={AddEmployeeComponent}></Route> 
+          <Route path ="/modifier-employe/:id" component={AddEmployeeComponent}></Route> 
           
         </Switch>
      

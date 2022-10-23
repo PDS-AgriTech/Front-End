@@ -9,18 +9,23 @@ const AddEmployeeComponent = () => {
     const [nom, setNom] = useState('')
     const [dept, setDept] = useState('')
     const history = useHistory()
-    const {numero} = useParams()
+    const {id} = useParams()
     const SaveUpdateEmployee = (e) => {
         e.preventDefault();
-        const employe = {prenom ,nom , dept}
+        const employe = {id, prenom ,nom , dept}
+        console.log(10);
 
-        if (numero) {
-            EmployeeService.UpdateEmployee(numero , employe).then((response) =>{
+        if ( id ) {
+            console.log(15);
+            EmployeeService.UpdateEmployee(id , employe).then((response) =>{
+                console.log(2);
                 history.push('/employes')
             } )
+
             .catch( error => {console.log(error)})
 
         } else{
+            console.log(20);
             EmployeeService.CreateEmployee(employe).then((response) =>{ 
                 console.log(response.data) 
                 history.push('/employes')
@@ -32,17 +37,17 @@ const AddEmployeeComponent = () => {
         
     useEffect(() => {
 
-        EmployeeService.SelectEmployeeById(numero).then((response) =>{
+        EmployeeService.SelectEmployeeById(id).then((response) =>{
             setPrenom(response.data.prenom)
             setNom(response.data.nom)
             setDept(response.data.dept)
         }).catch(error => {
             console.log(error)
         })
-    }, [])
+    }, [id])
 
     const title = () => {
-        if(numero) {
+        if(id) {
         return <h2 className="text-center"> Modifier L'employé</h2>
 
     }else {
